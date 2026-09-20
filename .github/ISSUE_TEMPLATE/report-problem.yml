@@ -1,0 +1,36 @@
+name: Report a problem
+description: Something wrong, missing or spoilery in an item?
+title: "Item: "
+labels: ["report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping. Please do not describe plot details in the text below: say what kind of problem it is and, if you can, how far into the game you are. This page is public.
+  - type: input
+    id: item_id
+    attributes:
+      label: Item id
+      description: Filled in automatically when you come from an item.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - The hint is inaccurate
+        - The spoiler label is too mild (it spoiled me)
+        - The item is missing or in the wrong act
+        - Changed in a patch or update
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: game_version
+    attributes:
+      label: Game version or platform (optional)
+      description: For "changed in a patch", for example 1.2.0 on PC.
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Keep it spoiler-free.

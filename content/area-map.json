@@ -1,0 +1,11 @@
+{
+  "_readme": "One entry per location a player can visit in the Prologue and Act 1. safe_name is a spoiler-free label shown in the app; first_act is the earliest milestone at which the location is reachable. Bulk items (pictos, weapons, outfits, flags, journals) inherit their spoiler severity from first_act. Fill this in during week 1 (docs/WEEK1.md, day 2).",
+  "locations": [],
+  "example_entry": {
+    "id": "example-area",
+    "safe_name": "A coastal area",
+    "first_act": "prologue",
+    "sources": [{"name": "guide name", "claim": "what it says about this location"}],
+    "notes": ""
+  }
+}

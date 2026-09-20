@@ -1,0 +1,2779 @@
+{
+ "_meta": {
+  "game": "Clair Obscur: Expedition 33",
+  "milestones": [
+   "prologue",
+   "act1",
+   "act2",
+   "act3"
+  ],
+  "impact_scale": {
+   "1": "trivial",
+   "2": "minor",
+   "3": "notable",
+   "4": "major",
+   "5": "game-changing"
+  },
+  "spoiler_scale": {
+   "0": "none",
+   "1": "minor",
+   "2": "moderate",
+   "3": "major plot"
+  },
+  "notes": "sev arrays give effective spoiler severity by player progress (index = milestone). Must be non-increasing. All items are DRAFT: derived from Game8, Sportskeeda, PowerPyx, Keengamer, GamerGuides and a Steam community guide (Sept 2026); impact and severity values are provisional and need human plus second-model audit.",
+  "scope": "MVP slice: items obtainable in the Prologue or Act 1",
+  "playable_milestones": [
+   "prologue",
+   "act1"
+  ]
+ },
+ "items": [
+  {
+   "id": "recoat",
+   "title_safe": "A respec tool from the starting area",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "unclear",
+   "tiers": {
+    "t1": {
+     "text": "Talk to the artists in the market area before you leave the opening section.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "One market NPC gives you a tool that lets you reallocate attributes and skill points. It cannot be obtained later.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Recoat: interact with the painter Nicholas at the Flower Market.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Prologue, Flower Market, permanent"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Prologue, interact with Nicholas, permanent"
+    },
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Nicholas the Painter Duel: Recoat lost (farmable later)"
+    }
+   ],
+   "conflict": "Game8 and Sportskeeda call it permanent; the Steam guide says the Recoat lost from the painter duel is farmable later.",
+   "status": "unverified"
+  },
+  {
+   "id": "chroma-catalyst",
+   "title_safe": "A weapon upgrade material in the starting area",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Check odd corners of the market area, not only the main path.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A weapon upgrade item is hidden near the stairs in the same area as the painter.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Chroma Catalyst: search the trash can near the stairs by the painter Nicholas.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Prologue, trash can, permanent"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Prologue, trash can near stairs, permanent"
+    },
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Trash Can Man, Harbor Area: 1x Chroma Catalyst lost"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified"
+  },
+  {
+   "id": "crimson-uniform",
+   "title_safe": "An outfit from the opening festival",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 3
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Take part in the festival activities before moving on.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "An outfit unlock is handed out by a festival NPC and is only available in the opening section.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Crimson Uniform: obtain it from Jules at the Expedition Festival.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Prologue, Festival, permanent"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Prologue, from Jules, permanent"
+    },
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Richard and Jules, Harbor Path: Crimson Uniform permanently missed"
+    },
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Give uniform from Richard to Jules in Lumiere; Act 1+; not missable"
+    }
+   ],
+   "conflict": "Game8's cosmetics list says the uniform can be handed to Jules in Lumiere in Act 1+ (not missable); Game8's missables list, Sportskeeda and the Steam guide say Prologue only. Treat as missable.",
+   "status": "unverified",
+   "review_notes": "Stylist impact 3 is a placeholder; rarity/prestige unknown."
+  },
+  {
+   "id": "bun-haircut",
+   "title_safe": "A hairstyle from a festival stall",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Festival stalls trade for something; do not skip them.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "One stall trades a festival token for a hairstyle accessory, only available now.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Bun Haircut: trade a Festival Token at Amandine's red-roofed stall.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Prologue, Festival booth, cosmetic for Gustave"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Prologue, Amandine's red-roofed stall"
+    },
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Bun: give Festival Token to Amandine during Prologue; missable"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified"
+  },
+  {
+   "id": "old-key",
+   "title_safe": "A key item from a festival stall",
+   "lenses": [
+    "missable_content",
+    "platinum"
+   ],
+   "category": "item",
+   "impact": {
+    "missable_content": 2,
+    "platinum": 4
+   },
+   "window": {
+    "from": "prologue",
+    "until": "unclear",
+    "pnr": "unclear"
+   },
+   "missable": "unclear",
+   "tiers": {
+    "t1": {
+     "text": "Do not spend all your festival tokens on one stall.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A key item from a stall unlocks a room and a journal entry in the old part of the city.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "The Old Key: trade a Festival Token at Colette's blue-roofed stall.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Prologue; obtainable later in Lumiere (not permanent)"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Prologue; permanent"
+    },
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Follow the Trail requires Old Key from Prologue Section 2"
+    },
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Old Key unlocks something in Act 2 that provides a record"
+    }
+   ],
+   "conflict": "Game8: obtainable later in Lumiere. Sportskeeda: permanent. PowerPyx: required for the 49-journal trophy and missable. Steam: unlocks a later item that gives a record. Treat as missable until verified.",
+   "status": "unverified"
+  },
+  {
+   "id": "karatom-quest",
+   "title_safe": "An outfit quest in an early village",
+   "lenses": [
+    "stylist",
+    "missable_content",
+    "powermonger"
+   ],
+   "category": "quest",
+   "impact": {
+    "stylist": 3,
+    "missable_content": 2,
+    "powermonger": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act1",
+    "pnr": "unclear"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Talk to every villager you meet in Act 1 before moving on.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A small side quest in an early village rewards a special outfit for the lead character.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Karatom's Quest: complete it in the Gestral Village in Act 1 for the Pure Outfit.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Act 1, Gestral Village, Pure Outfit for Gustave, permanent"
+    },
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Karatom's Sakapatate Quest: Pure Outfit + 3x Polished Chroma Catalyst; locked after Act 1"
+    }
+   ],
+   "conflict": "Game8's cosmetics list says the Pure outfit is available anytime; the Game8 missables list and Steam guide say it is locked after Act 1. Treat as missable.",
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "gustaves-homage",
+   "title_safe": "A skill tied to a journal in your camp",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "skill",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act2",
+    "pnr": "later in the story"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Read and interact with things at camp, not only fight.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A skill unlock is tied to the camp journal and stops being available late in the game.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Gustave's Homage: obtain it through the camp journal in Acts 1-2; it is unavailable in Act 3.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Act 1-2, camp journal, unavailable in Act 3"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source; exact trigger unclear."
+  },
+  {
+   "id": "white-nevron-choice",
+   "title_safe": "An enemy type that is best left alone",
+   "lenses": [
+    "storyline_deciders",
+    "platinum"
+   ],
+   "category": "choice",
+   "impact": {
+    "storyline_deciders": 3,
+    "platinum": 3
+   },
+   "window": {
+    "from": "prologue",
+    "until": "act3",
+    "pnr": "first kill"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Some fights have consequences beyond the fight. Think before attacking every enemy you see.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Attacking a certain harmless-looking enemy type turns a friendly NPC hostile and costs you a reward.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Killing White Nevrons makes the NPC Blanche hostile and you lose 100 Colours of Lumina.",
+     "sev": [
+      2,
+      1,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8",
+     "claim": "Killing White Nevrons: Blanche hostile, lose 100 Colours of Lumina, permanent"
+    },
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Blanche final reward is 100 Colour of Lumina if you spared the others"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Single source; verify the exact consequence and severity."
+  },
+  {
+   "id": "maelle-medalum",
+   "title_safe": "A strong weapon from an arena fight",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 4
+   },
+   "window": {
+    "from": "act1",
+    "until": "act1",
+    "pnr": "end of Act 1"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Not every Act 1 reward is in a chest. Watch for organized fights in the first big hub town.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "An arena in the first hub town gives one party member a top weapon that stays useful for a long time. One guide says no replacement is available until very late.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Medalum: win the Gestral Village tournament using Maelle (Keengamer: defeat Sel in the arena).",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Win Gestral Village tournament with Maelle: Medalum; no other until late Act 3"
+    },
+    {
+     "name": "Keengamer early weapons",
+     "claim": "Gestral Village Arena, defeat Sel: Medalum"
+    },
+    {
+     "name": "Game8 best weapons",
+     "claim": "Medalum is best for Maelle in Acts 2-3"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Two sources agree on location; only Steam calls it permanently missable."
+  },
+  {
+   "id": "lighterim",
+   "title_safe": "An early Lune weapon from a strong optional enemy",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Strong-looking early enemies can carry gear worth the fight.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "An early weapon for Lune drops from a stronger 'Chromatic' enemy in the first open area and makes fire skills cheaper.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Lighterim: drop from Chromatic Lancelier in Spring Meadows. PowerPyx suggests delaying this fight if you want the no-damage boss trophy.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Keengamer early weapons",
+     "claim": "Spring Meadows, drop from Chromatic Lancelier; fire skills cost 1 less AP"
+    },
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Skip Chromatic Lancelier for Professional trophy; return later"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Trade-off with the Professional trophy item."
+  },
+  {
+   "id": "sakaram",
+   "title_safe": "A high-damage weapon from the first ruins",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Bosses and tough enemies in the first ruins are worth clearing for gear.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A high-base-damage weapon for your lead character drops from a tough enemy in the first ruins area.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Sakaram: drop from Robust Sakapatate in the Ancient Sanctuary.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Keengamer early weapons",
+     "claim": "Ancient Sanctuary, drop from Robust Sakapatate; highest base damage, scales with Vitality"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "trebuchim",
+   "title_safe": "An early Lune weapon that generates stains",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Explore the maze parts of the first ruins, not just the main path.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "An early Lune weapon from the ruins generates elemental stains on attacks and refunds AP.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Trebuchim: drop from Catapult or Ranger Sakapatate in the Ancient Sanctuary maze.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Keengamer early weapons",
+     "claim": "Ancient Sanctuary Maze, drop from Catapult/Ranger Sakapatate"
+    },
+    {
+     "name": "Game8 best weapons",
+     "claim": "Recommended for Lune in Act 1 (Lightning, survivability)"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified"
+  },
+  {
+   "id": "brulerum",
+   "title_safe": "An early weapon for Maelle from a fire enemy",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Enemy types matter: some carry gear specific to a party member.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A crit-focused weapon for Maelle drops from a fire enemy in an early water-themed area.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Brulerum: drop from a Bruler in Flying Waters.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Keengamer early weapons",
+     "claim": "Flying Waters, drop from Bruler; reaches 100% crit while Stanceless"
+    },
+    {
+     "name": "Game8 best weapons",
+     "claim": "Best for Maelle in Act 1"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified"
+  },
+  {
+   "id": "survivor",
+   "title_safe": "A picto that survives one fatal hit",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 4
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Save your currency for one big purchase at a station.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A picto sold for a very large Chroma amount lets you survive one lethal hit per battle.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Survivor: exchange 98,000 Chroma at Monoco's Station.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 best pictos",
+     "claim": "Survivor: exchange 98,000 Chromas at Monoco's Station"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "first-strike",
+   "title_safe": "A picto that lets you act first",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Look inside odd structures in early areas.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A picto lets you act first so you can set up buffs before the enemy.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "First Strike: a shrine-like structure in Stone Wave Cliffs (Act 1).",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 best pictos",
+     "claim": "First Strike: Stone Wave Cliffs shrine-like structure, Act 1"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "breaker",
+   "title_safe": "A picto for extra break damage",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Tough optional enemies in the first ruins drop good pictos.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A picto from a tough enemy gives a flat 25% boost to break damage.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Breaker: defeat Ultimate Sakapatate in the Ancient Sanctuary.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 best pictos",
+     "claim": "Breaker: defeat Ultimate Sakapatate, Ancient Sanctuary"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "blanche-final-reward",
+   "title_safe": "The last Nevron request remembers how you treated others",
+   "lenses": [
+    "powermonger",
+    "storyline_deciders"
+   ],
+   "category": "quest",
+   "impact": {
+    "powermonger": 4,
+    "storyline_deciders": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Some optional requests remember your earlier choices.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "t2": {
+     "text": "The final Nevron request pays a large Lumina reward if you spared the earlier Nevrons and much less if you did not.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Blanche (The Fountain): 100 Colours of Lumina if you spared the others, otherwise 10 Colours plus 2 Catalysts.",
+     "sev": [
+      2,
+      2,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Blanche: 100 Colour of Lumina if spared others; else 10 Colour + 2 Catalysts"
+    },
+    {
+     "name": "Game8 side quests",
+     "claim": "Blanche at The Fountain"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Act window not given."
+  },
+  {
+   "id": "demineur-weapon",
+   "title_safe": "A Lune weapon from a Nevron request",
+   "lenses": [
+    "powermonger",
+    "platinum"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3,
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Some Nevron requests reward weapons.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A request in a watery area rewards a weapon for Lune; sparing the Nevron gives a better final reward.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Demineur (Flying Waters): Deminerim weapon for Lune.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Demineur, Flying Waters: Deminerim for Lune; sparing yields better final reward"
+    },
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Aiding the Enemy: complete all 10 Nevron quests"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Act window inferred."
+  },
+  {
+   "id": "hexga-auto-shell",
+   "title_safe": "A defensive picto from a Nevron with a fetch task",
+   "lenses": [
+    "powermonger",
+    "platinum"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2,
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "A cliff-top Nevron sends you to collect something first.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A defensive picto is awarded after you collect three rock crystals.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Hexga (Stone Wave Cliffs): collect three Rock Crystals for Auto Shell.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Hexga, Stone Wave Cliffs: Auto Shell; collect three Rock Crystals"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "troubadour-healing-parry",
+   "title_safe": "A healing picto from a musical Nevron",
+   "lenses": [
+    "powermonger",
+    "platinum"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2,
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Some Nevron requests reward healing tools.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A picto that heals on parry; sparing the Nevron is recommended for endgame benefits.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Troubadour (Stone Quarry): Healing Parry picto; spare him afterwards.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Troubadour, Stone Quarry: Healing Parry; sparing recommended"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Act window inferred. Single source."
+  },
+  {
+   "id": "jar-tint-shard",
+   "title_safe": "A healing shard from the first field Nevron",
+   "lenses": [
+    "powermonger",
+    "platinum"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2,
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "The first field Nevron request has a lasting consequence.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A healing shard is the reward; do not kill the Nevron afterwards if you want a better endgame reward.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Jar (Spring Meadows): 1 Healing Tint Shard; spare him afterwards.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Jar, Spring Meadows: Healing Tint Shard; do not kill after quest"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "bourgeon-lumina",
+   "title_safe": "A Lumina reward that needs optional boss loot",
+   "lenses": [
+    "powermonger",
+    "platinum"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3,
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "This request needs a drop from optional bosses.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A Colour of Lumina is awarded after you bring a Bourgeon Skin dropped by optional bosses.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Grown Bourgeon (The Small Bourgeon): Colour of Lumina for a Bourgeon Skin.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Bourgeon, The Small Bourgeon: Colour of Lumina; needs Bourgeon Skin"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Act window inferred. Single source."
+  },
+  {
+   "id": "chroma-priorities",
+   "title_safe": "Save Chroma for a few very expensive purchases",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Big-ticket purchases are coming. Do not spend all your currency early.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Several strong pictos cost roughly 90,000 to 98,000 Chroma each. Spending on cosmetics can delay them.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Survivor (98,000, Monoco's Station), Empowering Parry (97,800, after Fusoka) and Benisseur's Recovery (90,000 total).",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 best pictos",
+     "claim": "Survivor 98,000; Empowering Parry 97,800"
+    },
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Benisseur 90,000 Chroma total"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified"
+  },
+  {
+   "id": "noco-merchant",
+   "title_safe": "A traveling merchant who leaves in Act 1",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act1",
+    "pnr": "end of Act 1"
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Some merchants in Act 1 do not stay.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A merchant in the first hub area leaves after a certain point, so you cannot buy all his stock.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Noco (Gestral Village area): buy what you want before Act 1 ends.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Noco Merchant: cannot buy all his items before he leaves"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "eloise-balloon",
+   "title_safe": "A Colour of Lumina on the harbor path",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Talk to the balloon seller along the harbor path.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A balloon vendor on the harbor path gives a Colour of Lumina, which cannot be obtained after you leave.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Eloise's balloon on the harbor path: 1 Colour of Lumina.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Eloise Balloon, Harbor Path: 1x Colour of Lumina lost"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "life-enjoyers-door",
+   "title_safe": "A Colour of Lumina behind a door near the harbor",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 2
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Check doors near NPCs on the harbor path.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A door next to a balloon vendor leads to a Colour of Lumina you cannot come back for.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Life Enjoyers door behind Eloise on the harbor path: 1 Colour of Lumina.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Life Enjoyers Door behind Eloise: 1x Colour of Lumina lost"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "festival-picto-trade",
+   "title_safe": "A picto that depends on a festival stall purchase",
+   "lenses": [
+    "powermonger"
+   ],
+   "category": "item",
+   "impact": {
+    "powermonger": 3
+   },
+   "window": {
+    "from": "prologue",
+    "until": "act1",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "What you trade for at the festival can matter in Act 1.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "One festival stall trade gives a picto item that later unlocks a picto at a market trade in Act 1.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Weird Pictos (Sportskeeda calls them Unstable Pictos) from Tom's green-roofed stall; needed for the Jujubree trade in Gestral Village for Augmented Aim.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Jujubree trade in Gestral Village Market: Augmented Aim missed without Weird Pictos"
+    },
+    {
+     "name": "Game8 missables",
+     "claim": "Weird Pictos: Festival booth, permanent"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Unstable Pictos: Tom's green-roofed stall"
+    }
+   ],
+   "conflict": "Sources name the item differently (Weird vs Unstable Pictos).",
+   "status": "unverified",
+   "review_notes": "Depends on the festival token limit (see festival-token-choice)."
+  },
+  {
+   "id": "gustave-shop-cosmetics",
+   "title_safe": "Cosmetics for your lead character sold by early merchants",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act1",
+    "pnr": "end of Act 1"
+   },
+   "missable": "unclear",
+   "tiers": {
+    "t1": {
+     "text": "Spend on your lead character's looks before you finish Act 1.",
+     "sev": [
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Some shop cosmetics for your lead character cannot be bought after Act 1 ends.",
+     "sev": [
+      3,
+      3,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Sakapatate outfit and Gestral haircut for Gustave from the Gestral Village merchant.",
+     "sev": [
+      3,
+      3,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Gustave-only outfits/haircuts at Gestral Village merchant permanently missed after Act 1"
+    },
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Sakapatate/Gestral for Gustave listed as purchasable anytime"
+    }
+   ],
+   "conflict": "Game8's cosmetics list says these can be bought anytime; the Steam guide says they are lost after Act 1. Treat as missable.",
+   "status": "unverified",
+   "review_notes": "Hint text avoids saying why; the reason itself is a major spoiler."
+  },
+  {
+   "id": "beach-swimsuits",
+   "title_safe": "Swimsuits from beach minigames",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "The beach area has mini-games that reward outfits.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Several party members get swimsuits from different beach mini-games, some with hard requirements.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Gestral Beach: Gustave (parkour), Lune (question, or volleyball on Normal), Maelle (rock climbing), Sciel (volleyball Strongest), Monoco (Ascension).",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Swimsuits from Gestral Beach parkour, volleyball, rock climbing, ascension"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Act window inferred. Single source."
+  },
+  {
+   "id": "mime-cosmetics",
+   "title_safe": "Hairstyles and outfits from roaming Mime enemies",
+   "lenses": [
+    "stylist",
+    "missable_content"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2,
+    "missable_content": 1
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Odd-looking enemies out in the world carry cosmetics.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Mimes are optional enemies found across the map; defeating each awards a hairstyle or outfit.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Examples: Baguette outfit/haircut (Spring Meadows), Bald haircut for each character (Sunless Cliffs), Braid (Old Lumiere), Sirene haircut (Sirene).",
+     "sev": [
+      2,
+      2,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Mimes across many areas award haircuts and Baguette outfits"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Many locations; list is examples only. Single source."
+  },
+  {
+   "id": "lost-gestrals-early",
+   "title_safe": "Lost Gestrals in the early areas",
+   "lenses": [
+    "platinum",
+    "stylist",
+    "powermonger"
+   ],
+   "category": "collectible",
+   "impact": {
+    "platinum": 4,
+    "stylist": 2,
+    "powermonger": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Small Gestral characters hide across the first areas.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Finding lost Gestrals and telling their leader gives haircuts and an ability. Some need a later traversal ability.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "t3": {
+     "text": "1 Esquie's Nest (Maelle haircut), 2 Stone Wave Cliffs (Lune haircut), 3 White Tree (Sciel haircut, needs swimming), 4 Monoco's Station (Paint Break), 5 Coastal Cave (Verso haircut, needs swimming).",
+     "sev": [
+      2,
+      2,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 lost gestrals",
+     "claim": "Lost Gestrals 1-5 locations and rewards"
+    },
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Gestral haircuts unlock after finding 1, 2, 3 or 5 Lost Gestrals"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Naming Verso is mildly spoilery."
+  },
+  {
+   "id": "lune-sakapatate-outfit",
+   "title_safe": "An outfit for Lune from a stuck creature",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Help a stranded creature in the first village.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A rescue in the first village earns Lune an outfit.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Lune's Sakapatate outfit: get Purumi down from the broken pillar in Gestral Village.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Lune Sakapatate: get Purumi down from broken pillar in Gestral Village, Act 1+"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "maelle-sakapatate-outfit",
+   "title_safe": "An outfit for Maelle from a damage challenge",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "A village challenge rewards a big-damage hit.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A damage challenge in the first village earns Maelle an outfit.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Maelle's Sakapatate outfit: complete Ono-Puncho's Challenge (a 9999 damage hit).",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Maelle Sakapatate: Ono-Puncho's Challenge"
+    },
+    {
+     "name": "Game8 side quests",
+     "claim": "Ono-Puncho: damage challenge (9999)"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified"
+  },
+  {
+   "id": "pure-outfits-poems",
+   "title_safe": "Outfits from a poetry quiz",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "A fashionable NPC at a station quizzes you on poems.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Answer poem questions correctly to get an outfit for Lune, Maelle and Sciel.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Pure outfit: select the correct poem responses from the Grandis Fashionist at Monoco's Station.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Pure outfit for Lune/Maelle/Sciel: correct poem answers from Grandis Fashionist"
+    },
+    {
+     "name": "Game8 side quests",
+     "claim": "Grandis Fashionist at Monoco's Station"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "lune-sirene-outfit",
+   "title_safe": "An outfit and haircut from a coastal boss",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "A boss in the coastal area drops an outfit for Lune.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Beating a coastal boss awards an outfit; a Mime there awards a haircut.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Lune's Sirene outfit: defeat Glissando in Sirene. The Sirene haircut: defeat the Mime in Sirene.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Lune Sirene: defeat Glissando in Sirene; Sirene haircut: Mime in Sirene"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "maelle-manor-cosmetics",
+   "title_safe": "Cosmetics hidden around a mansion",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Poke around a large old house for wardrobes, puzzles and paintings.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A manor holds a wardrobe outfit, a kitchen puzzle haircut and a painting that unlocks more looks for Maelle.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Stone Wave Cliffs Manor wardrobe (Skirt), Kitchen Puzzle (Rebellious haircut), Manor Family Canvas (Painted Me outfit).",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Maelle: Skirt (wardrobe, Act 1+), Rebellious haircut (kitchen puzzle), Painted Me outfit (Manor Family Canvas)"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "kasumi-duel",
+   "title_safe": "An outfit bought after a duel",
+   "lenses": [
+    "stylist"
+   ],
+   "category": "outfit",
+   "impact": {
+    "stylist": 2
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "Duel a particular NPC to unlock her shop.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "After a duel, a character sells Maelle an outfit for 5,000 Chroma.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Obscur outfit: duel Kasumi, then purchase for 5,000 Chroma.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 cosmetics",
+     "claim": "Maelle Obscur: purchase from Kasumi for 5,000 Chroma after dueling her"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source; Act window inferred."
+  },
+  {
+   "id": "prologue-mime",
+   "title_safe": "A Mime fight in the opening area",
+   "lenses": [
+    "platinum",
+    "missable_content"
+   ],
+   "category": "encounter",
+   "impact": {
+    "platinum": 4,
+    "missable_content": 2
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Optional fights in the opening area matter for a trophy and a collectible.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A Mime at the end of an alley near the children's stage must be beaten before the harbor scene.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Defeat the Mime near the children's stage in Lumiere for the trophy 'A Peculiar Encounter' and a music record.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "A Peculiar Encounter: defeat the Mime in Prologue Section 1 before progression dialogue"
+    },
+    {
+     "name": "Game8 missables",
+     "claim": "Prologue Mime: can retry in New Game+"
+    },
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Mime Fight: trophy locked; Lumiere Record unavailable (can get elsewhere)"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Lumiere Music Record from Mime, permanent"
+    }
+   ],
+   "conflict": "Game8 says the trophy can be retried in New Game+; Steam says the record can be obtained elsewhere; Sportskeeda calls the record permanent.",
+   "status": "unverified"
+  },
+  {
+   "id": "festival-token-choice",
+   "title_safe": "Festival stalls where you cannot buy everything",
+   "lenses": [
+    "storyline_deciders",
+    "platinum"
+   ],
+   "category": "choice",
+   "impact": {
+    "storyline_deciders": 2,
+    "platinum": 3
+   },
+   "window": {
+    "from": "prologue",
+    "until": "prologue",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "You cannot have everything from the festival stalls.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Festival Tokens are limited, so you pick which stall trade you want: a hairstyle, a key item or a picto item.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Tokens for Amandine (Bun haircut), Colette (Old Key) and Tom (Weird/Unstable Pictos). Steam says you can only afford one.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Festival Tokens: need 3 but can only get 1; if not Old Key, miss Connoisseur record"
+    },
+    {
+     "name": "Sportskeeda",
+     "claim": "Three stalls trade Festival Tokens"
+    }
+   ],
+   "conflict": "Sources disagree on how many tokens you get; Sportskeeda lists all three trades as available.",
+   "status": "unverified",
+   "review_notes": "Verify token count in game."
+  },
+  {
+   "id": "overcharge-trophy",
+   "title_safe": "A trophy that must be earned with your starting character",
+   "lenses": [
+    "platinum"
+   ],
+   "category": "trophy",
+   "impact": {
+    "platinum": 3
+   },
+   "window": {
+    "from": "prologue",
+    "until": "act1",
+    "pnr": "end of Act 1"
+   },
+   "missable": "permanent",
+   "tiers": {
+    "t1": {
+     "text": "Some combat trophies are tied to your starting character and must be earned early.",
+     "sev": [
+      2,
+      2,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "A charged-up attack trophy must be earned before your starting character leaves the party.",
+     "sev": [
+      3,
+      3,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Overcharge (Gustave): use a fully charged Overcharge to break an enemy before the end of Act 1.",
+     "sev": [
+      3,
+      3,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Steam guide 3469875590",
+     "claim": "Overcharge becomes missable if not obtained before Gustave's death at end of Act 1"
+    },
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Overcharge listed as combat trophy; not flagged as missable"
+    }
+   ],
+   "conflict": "PowerPyx does not flag this trophy as missable; the Steam guide does.",
+   "status": "unverified",
+   "review_notes": "Hint avoids stating why."
+  },
+  {
+   "id": "professional-trophy",
+   "title_safe": "A no-damage boss trophy that is easy to spoil",
+   "lenses": [
+    "platinum"
+   ],
+   "category": "trophy",
+   "impact": {
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "A trophy needs a boss fight where you take no damage. Save an easy boss for it.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Do not use up every chance: skip a particular early elite boss and return once you are strong enough.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Professional: defeat a boss without taking damage; PowerPyx suggests skipping Chromatic Lancelier until later.",
+     "sev": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Professional: defeat a boss without taking damage; skip Chromatic Lancelier and return later"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "nevron-quest-givers",
+   "title_safe": "Which Nevron requests to spare",
+   "lenses": [
+    "storyline_deciders",
+    "platinum"
+   ],
+   "category": "choice",
+   "impact": {
+    "storyline_deciders": 3,
+    "platinum": 4
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Most Nevron requests should end peacefully. One should not.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Sparing the Nevron after the request improves a later reward, with one exception that should be fought.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Spare Jar, Demineur and Troubadour after their quests; fight Chalier.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx Nevron quests",
+     "claim": "Sparing Jar, Demineur, Troubadour recommended; Chalier should be fought"
+    },
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Aiding the Enemy: complete all 10 Nevron quests; avoid killing except designated one"
+    }
+   ],
+   "conflict": "Game8's earlier note says killing White Nevrons costs Lumina; PowerPyx says sparing quest-givers improves rewards. These are related but not identical rules.",
+   "status": "unverified"
+  },
+  {
+   "id": "journals-trophy",
+   "title_safe": "Journals for a collection trophy",
+   "lenses": [
+    "platinum",
+    "missable_content"
+   ],
+   "category": "collectible",
+   "impact": {
+    "platinum": 4,
+    "missable_content": 2
+   },
+   "window": {
+    "from": "prologue",
+    "until": "act3",
+    "pnr": "leaving the Festival (harbor scene)"
+   },
+   "missable": "unclear",
+   "tiers": {
+    "t1": {
+     "text": "A trophy tracks collected journals across the whole game.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "The journals are spread across every area, and one early key item may be required for the full set.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Follow the Trail: collect all 49 Journals; PowerPyx says the Old Key from the Prologue is required.",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Follow the Trail: all 49 Journals; requires Old Key in Prologue Section 2"
+    },
+    {
+     "name": "Game8 missables",
+     "claim": "Old Key: obtainable later in Lumiere"
+    }
+   ],
+   "conflict": "PowerPyx says the Old Key is required and missable; Game8 says you can get it later.",
+   "status": "unverified"
+  },
+  {
+   "id": "music-records-trophy",
+   "title_safe": "Music records for a collection trophy",
+   "lenses": [
+    "platinum",
+    "missable_content"
+   ],
+   "category": "collectible",
+   "impact": {
+    "platinum": 4,
+    "missable_content": 1
+   },
+   "window": {
+    "from": "prologue",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "A trophy tracks 33 music records; two are easy to miss.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Two records are tied to a Prologue fight and an Act 2 camp scene.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Connoisseur: all 33 music records; the Prologue Mime and the Act 2 camp scene records are the risky ones.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Connoisseur: 33 music records; two potentially missable"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  },
+  {
+   "id": "gestral-games",
+   "title_safe": "Winning all five Gestral mini-games",
+   "lenses": [
+    "platinum",
+    "missable_content"
+   ],
+   "category": "trophy",
+   "impact": {
+    "platinum": 3,
+    "missable_content": 1
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "none",
+   "tiers": {
+    "t1": {
+     "text": "A trophy tracks wins across village and beach mini-games.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Five mini-games must be won, including volleyball, races and climbing.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Gestral Games: win all 5 mini-games (source does not list the exact five).",
+     "sev": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "PowerPyx trophy guide",
+     "claim": "Gestral Games: win all 5 minigames"
+    },
+    {
+     "name": "Game8 side quests",
+     "claim": "Gestral Volleyball, Race, Beach Question, Gambler, Ono-Puncho"
+    }
+   ],
+   "conflict": null,
+   "status": "source_verified",
+   "review_notes": "Exact five not confirmed by source."
+  },
+  {
+   "id": "traversal-gated-collectibles",
+   "title_safe": "Collectibles behind later traversal abilities",
+   "lenses": [
+    "platinum"
+   ],
+   "category": "collectible",
+   "impact": {
+    "platinum": 3
+   },
+   "window": {
+    "from": "act1",
+    "until": "act3",
+    "pnr": null
+   },
+   "missable": "soft",
+   "tiers": {
+    "t1": {
+     "text": "Some early collectibles need abilities you gain later. Mark them and return.",
+     "sev": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "t2": {
+     "text": "Some Lost Gestrals need swimming, others need flying.",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    "t3": {
+     "text": "Lost Gestrals 3 and 5 need swimming (after Act 1); 7 to 9 need flying (after Act 2).",
+     "sev": [
+      1,
+      1,
+      1,
+      0
+     ]
+    }
+   },
+   "tier3_cap": null,
+   "sources": [
+    {
+     "name": "Game8 lost gestrals",
+     "claim": "Items 3 and 5 require swim ability; 7-9 need flying"
+    }
+   ],
+   "conflict": null,
+   "status": "unverified",
+   "review_notes": "Single source."
+  }
+ ]
+}

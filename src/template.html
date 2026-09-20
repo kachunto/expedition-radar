@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Spoiler-free checklist and hints for Clair Obscur: Expedition 33. Early version covering the Prologue and Act 1.">
+<title>Expedition Radar</title>
+<style>
+:root{
+  --bg:#EDF0F6;--surface:#FFFFFF;--surface2:#E3E8F2;--ink:#172033;--muted:#56637C;--line:#CBD3E2;
+  --accent:#2E45D1;--accent-ink:#FFFFFF;--accent-soft:#DCE2FB;
+  --s0:#1F7A4D;--s0bg:#DDF1E6;--s1:#7F5900;--s1bg:#FBEFC9;--s2:#9A4200;--s2bg:#FCE1CC;--s3:#A31F2D;--s3bg:#F9D8DB;
+  --font-display:"Young Serif",Georgia,serif;--font-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1320;--surface:#161D2E;--surface2:#1F2840;--ink:#E7EBF5;--muted:#9AA6C0;--line:#2B3652;
+  --accent:#8E9DFF;--accent-ink:#0E1320;--accent-soft:#252F5E;
+  --s0:#6FD3A0;--s0bg:#163326;--s1:#E8C15A;--s1bg:#3A2E10;--s2:#F0A467;--s2bg:#40260F;--s3:#FF8A93;--s3bg:#45181D;
+}}
+:root[data-theme="dark"]{
+  --bg:#0E1320;--surface:#161D2E;--surface2:#1F2840;--ink:#E7EBF5;--muted:#9AA6C0;--line:#2B3652;
+  --accent:#8E9DFF;--accent-ink:#0E1320;--accent-soft:#252F5E;
+  --s0:#6FD3A0;--s0bg:#163326;--s1:#E8C15A;--s1bg:#3A2E10;--s2:#F0A467;--s2bg:#40260F;--s3:#FF8A93;--s3bg:#45181D;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:820px;margin-inline:auto;padding-inline:16px;padding-block:20px 56px}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-bottom:14px}
+.brand{font-family:var(--font-display);font-size:26px;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.game{font-family:var(--font-mono);font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.notice{font-size:13px;color:var(--muted);background:var(--surface2);border-radius:6px;padding:8px 12px;margin-bottom:16px}
+.panel > *{min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:14px}
+.field-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;display:block}
+.seg{display:flex;flex-wrap:wrap;gap:4px}
+.seg button{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:6px 12px;font-size:14px}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.lenses{max-width:100%;display:flex;gap:4px;overflow-x:auto;padding-bottom:2px}
+.lenses button{white-space:nowrap;border:0;border-bottom:2px solid transparent;background:none;padding:6px 10px;font-size:14px;color:var(--muted)}
+.lenses button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:flex-end}
+.filters input[type=search]{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 8px;width:11rem;max-width:100%}
+.filters select{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+.check-inline{display:flex;align-items:center;gap:8px;font-size:14px}
+.summary{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;margin:18px 0 10px}
+.bar{flex:1 1 160px;height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;min-width:120px}
+.bar i{display:block;height:100%;background:var(--accent)}
+.sum-text{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+details.legend{font-size:13px;color:var(--muted)}
+details.legend summary{cursor:pointer}
+.legend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-top:8px}
+h2.group{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+h2.group button{border:0;background:none;color:var(--accent);font-size:12px;text-transform:none;letter-spacing:0;padding:2px 4px}
+ul.items{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.row{background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.row.done .title{text-decoration:line-through;color:var(--muted)}
+.row-head{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px;align-items:start}
+.row-head input[type=checkbox]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--accent)}
+.main{border:0;background:none;text-align:left;padding:0;width:100%;display:block}
+.title{font-weight:600;font-size:16px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:6px;align-items:center}
+.chip{font-family:var(--font-mono);font-size:11.5px;padding:2px 7px;border-radius:4px;background:var(--surface2);color:var(--muted);white-space:nowrap}
+.chip.warn{background:var(--s1bg);color:var(--s1)}
+.chip.ok{background:var(--s0bg);color:var(--s0)}
+.chip.miss{background:var(--s3bg);color:var(--s3)}
+.pips{display:inline-flex;gap:2px;vertical-align:middle;margin-right:4px}
+.pips i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.pips i.on{background:var(--accent)}
+.impact{font-family:var(--font-mono);font-size:11.5px;color:var(--ink);white-space:nowrap}
+.detail{border-top:1px solid var(--line);padding:12px;display:grid;gap:10px}
+.tier{border:1px solid var(--line);border-radius:8px;padding:10px 12px;display:grid;gap:8px;background:var(--bg)}
+.tier-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px}
+.tier-name{font-weight:600;font-size:14px}
+.sev{font-family:var(--font-mono);font-size:11.5px;padding:2px 8px;border-radius:4px;display:inline-flex;gap:6px;align-items:center;white-space:nowrap}
+.sev.s0{background:var(--s0bg);color:var(--s0)}.sev.s1{background:var(--s1bg);color:var(--s1)}
+.sev.s2{background:var(--s2bg);color:var(--s2)}.sev.s3{background:var(--s3bg);color:var(--s3)}
+.tier-text{margin:0;font-size:15px}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:6px 12px;font-size:14px;font-weight:600;justify-self:start}
+.btn.ghost{background:none;color:var(--accent)}
+.btn.danger{border-color:var(--s3);background:var(--s3bg);color:var(--s3)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.note{font-size:13px;color:var(--muted);margin:0}
+.src{font-size:12.5px;color:var(--muted);margin:0}
+a.btn{text-decoration:none;display:inline-block}
+.foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:13px;color:var(--muted)}
+.foot a{color:var(--accent)}
+.empty{color:var(--muted);font-size:14px;padding:14px;text-align:center;border:1px dashed var(--line);border-radius:8px}
+@media (prefers-reduced-motion:no-preference){.bar i{transition:width .25s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1 class="brand">Expedition Radar</h1>
+    <span class="game">Clair Obscur: Expedition 33</span>
+  </header>
+  <p class="notice">Early version: Prologue and Act 1 only. Act 2 and Act 3 are coming. Hints are drafts compiled from public guides; each item shows how far it can be trusted. Impact scores and spoiler labels are still being checked, so use the report link if something looks wrong.</p>
+
+  <section class="panel" aria-label="Your setup">
+    <div>
+      <span class="field-label" id="lbl-ms">Where are you in the story?</span>
+      <div class="seg" id="ms" role="group" aria-labelledby="lbl-ms"></div>
+    </div>
+    <div>
+      <span class="field-label" id="lbl-lens">What are you playing for?</span>
+      <div class="lenses" id="lenses" role="tablist" aria-labelledby="lbl-lens"></div>
+    </div>
+    <div class="filters">
+      <div>
+        <span class="field-label" id="lbl-tol">Spoiler tolerance</span>
+        <div class="seg" id="tol" role="group" aria-labelledby="lbl-tol"></div>
+      </div>
+      <div>
+        <label class="field-label" for="minimp">Minimum impact</label>
+        <select id="minimp"></select>
+      </div>
+      <div>
+        <label class="field-label" for="q">Search</label>
+        <input id="q" type="search" placeholder="Search titles" autocomplete="off">
+      </div>
+      <label class="check-inline"><input type="checkbox" id="hidedone"> Hide completed</label>
+    </div>
+    <details class="legend">
+      <summary>How labels work</summary>
+      <div class="legend-grid" id="legend"></div>
+      <p class="note" style="margin-top:8px"><strong>Trust badges.</strong> Sources agree: two or more guides state it the same way. Unverified: a single source or not yet cross-checked. Sources disagree: guides conflict, and the item says how. A badge is a starting signal, not proof.</p>
+      <p class="note" style="margin-top:8px">Each hint shows how big a spoiler it is for your current point in the story. Hints above your tolerance stay locked until you choose to reveal them.</p>
+    </details>
+  </section>
+
+  <div class="summary" id="summary"></div>
+  <div id="list"></div>
+  <div class="foot"><button class="btn ghost" id="reset" type="button">Reset progress</button><span id="ver"></span><a href="legal.html">Impressum and privacy</a><a id="repolink" href="#" target="_blank" rel="noopener">Report a general problem</a></div>
+</div>
+
+<script>
+const DATA = __DATA__;
+const M = DATA._meta.milestones;
+const MN = ["Prologue","Act 1","Act 2","Act 3"];
+const PLAY = (DATA._meta.playable_milestones || M).length;
+const REPO = "__REPO__";
+const VERSION = "__VERSION__";
+const LENSES = [["all","All lenses"],["powermonger","Powermonger"],["storyline_deciders","Storyline deciders"],["stylist","Stylist"],["platinum","Platinum"],["missable_content","Missable content"]];
+const LENS_NAME = Object.fromEntries(LENSES);
+const IMPACT = {1:"Trivial",2:"Minor",3:"Notable",4:"Major",5:"Game-changing"};
+const SEV = {0:"No spoiler",1:"Minor spoiler",2:"Moderate spoiler",3:"Major plot spoiler"};
+const SEV_DESC = {0:"Nothing about the story is revealed.",1:"A name, area or small detail.",2:"A character, place or mechanic you may not have met yet.",3:"Gives away or implies a late-game plot point."};
+const TOL = [[0,"None"],[1,"Minor"],[2,"Moderate"],[3,"Any"]];
+const TIER = ["Nudge","Hint","Detailed hint"];
+const KEY = "expedition-radar-v1";
+
+const defaults = {ms:0, lens:"all", tol:1, minImp:1, hideDone:false, checked:{}, rev:{}};
+let S = Object.assign({}, defaults);
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign({}, defaults, JSON.parse(raw)); } catch (e) {}
+if (!(S.ms >= 0 && S.ms < PLAY)) S.ms = 0;
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
+const ui = {q:"", open:new Set(), showLater:false, showPassed:false, confirm:null};
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const idx = m => M.indexOf(m);
+const $ = id => document.getElementById(id);
+
+function status(it, cur){
+  const from = idx(it.window.from);
+  const untilRaw = it.window.until;
+  const until = untilRaw === "unclear" ? 99 : idx(untilRaw);
+  if (from > cur) return "later";
+  if (until < cur) return "passed";
+  if (until === cur && until < M.length - 1) return "closing";
+  return "open";
+}
+function impactFor(it){
+  if (S.lens === "all") { const v = Object.values(it.impact); return Math.max(...v); }
+  return it.impact[S.lens] || 0;
+}
+function windowText(it){
+  const f = idx(it.window.from), u = it.window.until === "unclear" ? -1 : idx(it.window.until);
+  if (u === -1) return "From " + MN[f] + " (end unclear)";
+  if (u >= PLAY) return "From " + MN[f] + " onward";
+  return f === u ? MN[f] + " only" : MN[f] + " to " + MN[u];
+}
+function reportUrl(it){ return REPO + "/issues/new?template=report-problem.yml&title=" + encodeURIComponent("Item: " + it.title_safe) + "&item_id=" + encodeURIComponent(it.id); }
+function pips(n){ let h = '<span class="pips" aria-hidden="true">'; for (let i=1;i<=5;i++) h += '<i class="'+(i<=n?"on":"")+'"></i>'; return h+"</span>"; }
+
+function renderControls(){
+  $("ms").innerHTML = MN.slice(0, PLAY).map((n,i)=>'<button type="button" data-a="ms" data-v="'+i+'" aria-pressed="'+(S.ms===i)+'">'+n+'</button>').join("");
+  $("lenses").innerHTML = LENSES.map(([k,n])=>'<button type="button" role="tab" data-a="lens" data-v="'+k+'" aria-selected="'+(S.lens===k)+'">'+n+'</button>').join("");
+  $("tol").innerHTML = TOL.map(([v,n])=>'<button type="button" data-a="tol" data-v="'+v+'" aria-pressed="'+(S.tol===v)+'">'+n+'</button>').join("");
+  $("minimp").innerHTML = [1,2,3,4,5].map(v=>'<option value="'+v+'"'+(S.minImp===v?" selected":"")+'>'+(v===1?"All":v+"+ "+IMPACT[v])+'</option>').join("");
+  $("hidedone").checked = S.hideDone;
+  if ($("q") && $("q").value !== ui.q) $("q").value = ui.q;
+  $("legend").innerHTML = [0,1,2,3].map(s=>'<div><span class="sev s'+s+'">'+SEV[s]+'</span><p class="note">'+SEV_DESC[s]+'</p></div>').join("");
+}
+
+function tierBlock(it, n){
+  const t = it.tiers["t"+n];
+  const eff = t.sev[S.ms];
+  const revealed = S.rev[it.id] || 0;
+  const capped = n === 3 && it.tier3_cap;
+  const needsConfirm = eff > S.tol || capped;
+  let body;
+  if (revealed >= n) {
+    body = '<p class="tier-text">'+esc(t.text)+'</p>';
+  } else if (revealed < n - 1) {
+    body = '<p class="note">Open hint '+(n-1)+' first.</p>';
+  } else {
+    const ck = it.id+":"+n;
+    let label = "Reveal " + TIER[n-1].toLowerCase();
+    let cls = "btn";
+    if (needsConfirm) { cls = "btn danger"; label = ui.confirm === ck ? "Tap again to reveal" : "Reveal anyway"; }
+    body = '';
+    if (capped && eff > S.tol + 0) body += '<p class="note">'+esc(it.tier3_cap)+'</p>';
+    else if (capped) body += '<p class="note">'+esc(it.tier3_cap)+'</p>';
+    if (eff > S.tol) body += '<p class="note">Above your spoiler tolerance ('+esc(TOL[S.tol][1])+'). This will be a '+SEV[eff].toLowerCase()+' for where you are now.</p>';
+    body += '<button type="button" class="'+cls+'" data-a="reveal" data-id="'+it.id+'" data-n="'+n+'">'+label+'</button>';
+  }
+  return '<div class="tier"><div class="tier-head"><span class="tier-name">'+n+'. '+TIER[n-1]+'</span><span class="sev s'+eff+'" title="Spoiler severity at '+MN[S.ms]+'">'+SEV[eff]+'</span></div>'+body+'</div>';
+}
+
+function rowHtml(it, st){
+  const done = !!S.checked[it.id];
+  const open = ui.open.has(it.id);
+  const imp = impactFor(it);
+  const chips = [];
+  chips.push('<span class="impact">'+pips(imp)+esc(IMPACT[imp])+(S.lens==="all"?"":" · "+esc(LENS_NAME[S.lens]))+'</span>');
+  chips.push('<span class="chip'+(st==="closing"?" warn":"")+'">'+esc(windowText(it))+'</span>');
+  if (it.missable === "permanent") chips.push('<span class="chip miss">Permanent miss</span>');
+  else if (it.missable === "soft") chips.push('<span class="chip warn">Soft miss</span>');
+  else if (it.missable === "unclear") chips.push('<span class="chip warn">Missable? unclear</span>');
+  if (it.conflict) chips.push('<span class="chip warn">Sources disagree</span>');
+  else if (it.status === "source_verified") chips.push('<span class="chip ok" title="Two or more guides state this the same way">Sources agree</span>');
+  else chips.push('<span class="chip" title="Single source, or not yet cross-checked">Unverified</span>');
+  if (S.lens === "all") chips.push(it.lenses.map(l=>'<span class="chip">'+esc(LENS_NAME[l])+'</span>').join(""));
+  let detail = "";
+  if (open) {
+    detail = '<div class="detail">' + [1,2,3].map(n=>tierBlock(it,n)).join("");
+    if ((S.rev[it.id]||0) > 0) detail += '<button type="button" class="btn ghost" data-a="hide" data-id="'+it.id+'">Hide hints again</button>';
+    detail += '<p class="src">Window: '+esc(windowText(it))+(it.window.pnr && it.window.pnr!=="unclear" ? " · point of no return: "+esc(it.window.pnr) : "")+'</p>';
+    if (it.conflict) detail += '<p class="note"><strong>Sources disagree.</strong> '+esc(it.conflict)+'</p>';
+    detail += '<p class="src">Sources: '+it.sources.map(s=>esc(s.name)).join(", ")+(it.sources.length===1?" (single source)":"")+' · trust: '+(it.conflict?"sources disagree":it.status==="source_verified"?"sources agree":"unverified")+'</p><p class="src"><a href="'+esc(reportUrl(it))+'" target="_blank" rel="noopener">Report a problem with this item</a></p></div>';
+  }
+  return '<li class="row'+(done?" done":"")+'"><div class="row-head"><input type="checkbox" id="chk-'+it.id+'" data-a="check" data-id="'+it.id+'" aria-label="Mark done: '+esc(it.title_safe)+'"'+(done?" checked":"")+'>'+
+    '<button type="button" class="main" data-a="toggle" data-id="'+it.id+'" aria-expanded="'+open+'"><span class="title">'+esc(it.title_safe)+'</span><span class="meta">'+chips.join("")+'</span></button></div>'+detail+'</li>';
+}
+
+function render(){
+  renderControls();
+  const all = DATA.items.filter(it => S.lens==="all" || it.lenses.includes(S.lens));
+  const doneCount = all.filter(it=>S.checked[it.id]).length;
+  const pct = all.length ? Math.round(doneCount/all.length*100) : 0;
+  const q = ui.q.trim().toLowerCase();
+  let items = all.filter(it => impactFor(it) >= S.minImp && !(S.hideDone && S.checked[it.id]) && (!q || it.title_safe.toLowerCase().includes(q)));
+  const groups = {closing:[],open:[],later:[],passed:[]};
+  items.forEach(it => groups[status(it,S.ms)].push(it));
+  const sortFn = (a,b) => impactFor(b)-impactFor(a) || a.title_safe.localeCompare(b.title_safe);
+  Object.values(groups).forEach(g=>g.sort(sortFn));
+  const remainingClosing = groups.closing.filter(it=>!S.checked[it.id]).length;
+  $("summary").innerHTML = '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+pct+'" aria-label="Completed"><i style="width:'+pct+'%"></i></div><span class="sum-text">'+doneCount+' of '+all.length+' done · '+remainingClosing+' closing at end of '+MN[S.ms]+'</span>';
+
+  let html = "";
+  const section = (title, arr, extra) => {
+    if (!arr.length) return "";
+    return '<h2 class="group"><span>'+title+' ('+arr.length+')</span>'+(extra||"")+'</h2><ul class="items">'+arr.map(it=>rowHtml(it, status(it,S.ms))).join("")+'</ul>';
+  };
+  html += section("Closing soon: leave " + MN[S.ms] + " and these are gone", groups.closing);
+  html += section("Available now", groups.open);
+  if (groups.later.length) {
+    html += '<h2 class="group"><span>Later ('+groups.later.length+')</span><button type="button" data-a="later">'+(ui.showLater?"Hide":"Show titles")+'</button></h2>';
+    html += ui.showLater ? '<ul class="items">'+groups.later.map(it=>rowHtml(it,"later")).join("")+'</ul>' : '<p class="note">Hidden so the list does not hint at what is coming.</p>';
+  }
+  if (groups.passed.length) {
+    html += '<h2 class="group"><span>Window passed ('+groups.passed.length+')</span><button type="button" data-a="passed">'+(ui.showPassed?"Hide":"Show")+'</button></h2>';
+    html += ui.showPassed ? '<ul class="items">'+groups.passed.map(it=>rowHtml(it,"passed")).join("")+'</ul>' : '<p class="note">Items you did not tick may be missed already.</p>';
+  }
+  if (!items.length) html = '<p class="empty">Nothing matches these filters.</p>';
+  $("list").innerHTML = html;
+}
+
+document.addEventListener("click", e => {
+  const el = e.target.closest("[data-a]"); if (!el) return;
+  const a = el.dataset.a, id = el.dataset.id;
+  if (a === "check") return; // handled on change
+  if (a === "ms") S.ms = +el.dataset.v;
+  else if (a === "lens") S.lens = el.dataset.v;
+  else if (a === "tol") S.tol = +el.dataset.v;
+  else if (a === "toggle") { ui.open.has(id) ? ui.open.delete(id) : ui.open.add(id); }
+  else if (a === "later") ui.showLater = !ui.showLater;
+  else if (a === "passed") ui.showPassed = !ui.showPassed;
+  else if (a === "hide") { S.rev[id] = 0; }
+  else if (a === "reveal") {
+    const n = +el.dataset.n, it = DATA.items.find(x=>x.id===id);
+    const eff = it.tiers["t"+n].sev[S.ms];
+    const needs = eff > S.tol || (n===3 && it.tier3_cap);
+    const ck = id+":"+n;
+    if (needs && ui.confirm !== ck) { ui.confirm = ck; render(); return; }
+    ui.confirm = null; S.rev[id] = n;
+  }
+  if (a !== "reveal") ui.confirm = null;
+  save(); render();
+});
+document.addEventListener("change", e => {
+  const el = e.target;
+  if (el.dataset && el.dataset.a === "check") { S.checked[el.dataset.id] = el.checked; if (!el.checked) delete S.checked[el.dataset.id]; }
+  else if (el.id === "minimp") S.minImp = +el.value;
+  else if (el.id === "hidedone") S.hideDone = el.checked;
+  else return;
+  save(); render();
+});
+document.addEventListener("input", e => {
+  if (e.target.id !== "q") return;
+  ui.q = e.target.value; const pos = e.target.selectionStart; render();
+  const q = $("q"); q.value = ui.q; q.focus(); try { q.setSelectionRange(pos,pos); } catch (err) {}
+});
+$("reset").addEventListener("click", () => { S = Object.assign({}, defaults, {checked:{}, rev:{}}); ui.open.clear(); ui.confirm = null; save(); render(); });
+$("ver").textContent = VERSION;
+$("repolink").href = REPO + "/issues/new?template=report-problem.yml";
+render();
+</script>
+</body>
+</html>
