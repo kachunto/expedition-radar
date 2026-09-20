@@ -1,11 +1,446 @@
 {
-  "_readme": "One entry per location a player can visit in the Prologue and Act 1. safe_name is a spoiler-free label shown in the app; first_act is the earliest milestone at which the location is reachable. Bulk items (pictos, weapons, outfits, flags, journals) inherit their spoiler severity from first_act. Fill this in during week 1 (docs/WEEK1.md, day 2).",
-  "locations": [],
-  "example_entry": {
-    "id": "example-area",
-    "safe_name": "A coastal area",
-    "first_act": "prologue",
-    "sources": [{"name": "guide name", "claim": "what it says about this location"}],
-    "notes": ""
+ "_readme": "DEV DATA, NOT SHIPPED: build.py does not copy this file. One entry per location a player can reach in the Prologue or Act 1. name is the real name (internal, and usable in hints only at severity >= 1 before first_act); safe_name is the spoiler-free label. Bulk items inherit spoiler severity from first_act via severity_rule. confidence: two_or_more_sources | single_act_source | conflict.",
+ "_meta": {
+  "status": "REVIEWED by owner on 2026-09-20 (Yellow Harvest and safe names); optional areas cross-checked against 4 more guides",
+  "method": "Area order and act from guide walkthrough/zone-order pages; collectible counts from PowerPyx via a page-summarizing fetch tool, so treat counts as unverified. Yellow Harvest resolved provisionally (see entry).",
+  "guides": [
+   "Gamer Blurb zone order guide",
+   "GameFAQs walkthrough",
+   "PowerPyx Act 1 collectibles guide",
+   "PowerPyx Prologue collectibles guide",
+   "Maxroll zone progression guide",
+   "game-checklists.com",
+   "Sportskeeda Yellow Harvest guide",
+   "GamesRecon Yellow Harvest guide"
+  ],
+  "scope_decision": "Merchant-sold items are out of the MVP (decided 2026-09-20)."
+ },
+ "severity_rule": {
+  "before_first_act": {
+   "t1": 0,
+   "t2": 1,
+   "t3": 1
+  },
+  "from_first_act": {
+   "t1": 0,
+   "t2": 0,
+   "t3": 0
+  },
+  "comment": "Naming an area the player has not reached yet is a minor spoiler (S1). Once they have reached its act the location itself is not a spoiler. Item-specific content (a character, a reward, a boss) adds its own severity on top; take the higher value."
+ },
+ "locations": [
+  {
+   "id": "lumiere-opening",
+   "name": "Lumière",
+   "safe_name": "The opening city",
+   "first_act": "prologue",
+   "order": 0,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Prologue collectibles guide"
+   ],
+   "notes": "Lumière is visited again in later acts; every item must record which act's visit it belongs to. Harbor scene at the end of the Prologue is the Prologue's point of no return (single source: our seed).",
+   "sub_areas": [
+    "Main Street",
+    "Festival",
+    "Harbor"
+   ],
+   "collectibles_seen": {
+    "records": 1,
+    "key_items": 1
+   }
+  },
+  {
+   "id": "spring-meadows",
+   "name": "Spring Meadows",
+   "safe_name": "The first open-air area",
+   "first_act": "act1",
+   "order": 1,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Act 1 collectibles guide"
+   ],
+   "notes": "",
+   "sub_areas": [
+    "Meadows Corridor",
+    "Grand Meadow",
+    "Abandoned Expeditioner Camp"
+   ],
+   "collectibles_seen": {
+    "journals": 1,
+    "nevron_quests": 1
+   }
+  },
+  {
+   "id": "flying-waters",
+   "name": "Flying Waters",
+   "safe_name": "A coastal area",
+   "first_act": "act1",
+   "order": 2,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Act 1 collectibles guide"
+   ],
+   "notes": "",
+   "sub_areas": [
+    "Noco's Hut",
+    "Coral Cave",
+    "Lumieran Streets",
+    "Flower Field"
+   ],
+   "collectibles_seen": {
+    "journals": 1,
+    "nevron_quests": 1,
+    "key_items": 1
+   }
+  },
+  {
+   "id": "ancient-sanctuary",
+   "name": "Ancient Sanctuary",
+   "safe_name": "A ruined temple",
+   "first_act": "act1",
+   "order": 3,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Act 1 collectibles guide"
+   ],
+   "notes": "",
+   "sub_areas": [
+    "Entrance",
+    "Sanctuary Maze",
+    "Giant Bell Alley"
+   ],
+   "collectibles_seen": {
+    "journals": 1
+   }
+  },
+  {
+   "id": "gestral-village",
+   "name": "Gestral Village",
+   "safe_name": "A secluded hideaway",
+   "first_act": "act1",
+   "order": 4,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Act 1 collectibles guide"
+   ],
+   "notes": "",
+   "sub_areas": [
+    "Entrance",
+    "The Manor"
+   ],
+   "collectibles_seen": {
+    "journals": 1,
+    "records": 1
+   }
+  },
+  {
+   "id": "esquies-nest",
+   "name": "Esquie's Nest",
+   "safe_name": "A cave beyond the hideaway",
+   "first_act": "act1",
+   "order": 5,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Act 1 collectibles guide"
+   ],
+   "notes": "Clearing it unlocks a traversal ability that opens the optional areas below.",
+   "sub_areas": [
+    "Entrance",
+    "Francois' Cave"
+   ],
+   "collectibles_seen": {
+    "journals": 1
+   }
+  },
+  {
+   "id": "stone-wave-cliffs",
+   "name": "Stone Wave Cliffs",
+   "safe_name": "A rugged headland",
+   "first_act": "act1",
+   "order": 6,
+   "kind": "main",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Gamer Blurb zone order guide",
+    "GameFAQs walkthrough",
+    "PowerPyx Act 1 collectibles guide"
+   ],
+   "notes": "Last main area of Act 1 per all three sources.",
+   "sub_areas": [
+    "Entrance",
+    "Paintress Shrine",
+    "Old Farm",
+    "Tide Caverns",
+    "Flooded Buildings",
+    "Basalt Waves"
+   ],
+   "collectibles_seen": {
+    "journals": 3,
+    "records": 1,
+    "nevron_quests": 1,
+    "key_items": 3
+   }
+  },
+  {
+   "id": "twilight-quarry",
+   "name": "Twilight Quarry",
+   "safe_name": "An optional excavation site",
+   "first_act": "act1",
+   "order": 7,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "GameFAQs Act 1 exploration section",
+    "PowerPyx Act 1 collectibles guide",
+    "Expedition33.gg Act 1 walkthrough",
+    "Push Square 100% collectibles guide (Act 1 optional)"
+   ],
+   "notes": "Confirmed by four act-tagged sources.",
+   "collectibles_seen": {
+    "records": 1
+   },
+   "access": "Esquie's Nest cleared"
+  },
+  {
+   "id": "ancient-gestral-city",
+   "name": "Ancient Gestral City",
+   "safe_name": "An optional ruined settlement",
+   "first_act": "act1",
+   "order": 8,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "GameFAQs Act 1 exploration section",
+    "PowerPyx Act 1 collectibles guide",
+    "Expedition33.gg Act 1 walkthrough",
+    "Push Square 100% collectibles guide (Act 1 optional)"
+   ],
+   "notes": "Confirmed by four act-tagged sources.",
+   "collectibles_seen": {
+    "records": 1
+   },
+   "access": "Esquie's Nest cleared"
+  },
+  {
+   "id": "lost-woods",
+   "name": "Lost Woods",
+   "safe_name": "An optional forest",
+   "first_act": "act1",
+   "order": 9,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "GameFAQs Act 1 exploration section",
+    "PowerPyx Act 1 collectibles guide",
+    "Push Square 100% collectibles guide (Act 1 optional)"
+   ],
+   "notes": "Confirmed by three act-tagged sources.",
+   "collectibles_seen": {
+    "records": 1
+   }
+  },
+  {
+   "id": "yellow-harvest",
+   "name": "Yellow Harvest",
+   "safe_name": "An optional dangerous field",
+   "first_act": "act1",
+   "order": 10,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "PowerPyx Act 1 collectibles guide",
+    "GameFAQs Act 1 exploration section",
+    "Expedition33.gg Act 1 walkthrough",
+    "GamesRecon Yellow Harvest guide",
+    "Sportskeeda Yellow Harvest guide",
+    "Push Square 100% collectibles guide (Act 1 optional)",
+    "Owner (played the game)"
+   ],
+   "notes": "Resolved 2026-09-20: reachable in Act 1 as soon as Esquie has joined the party. Maxroll's 'post Stone Wave Cliffs' is a recommended order, not an access gate. It is dangerous for an Act 1 party (red danger warning, about level 20 recommended), so every item here carries a note about that.",
+   "sub_areas": [
+    "Harvester's Hollow",
+    "Yellow Spire Wrecks",
+    "Lost Woods"
+   ],
+   "collectibles_seen": {
+    "journals": 3
+   },
+   "access": "Esquie has joined the party (clear Esquie's Nest)",
+   "owner_confirmed": true
+  },
+  {
+   "id": "gestral-beach",
+   "name": "Gestral Beach Near the Gestral Village",
+   "safe_name": "An optional shoreline",
+   "first_act": "act1",
+   "order": 11,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "PowerPyx Act 1 collectibles guide",
+    "Steam community 100% guide (first beach is Act 1)",
+    "Maxroll zone progression guide (free roam)"
+   ],
+   "notes": "There are several Gestral Beaches in the game; only this one, near the Gestral Village, is Act 1 (the others are Act 2 and Act 3 per the Steam guide). Only this beach belongs in the MVP.",
+   "collectibles_seen": {
+    "gestral_games": 1
+   }
+  },
+  {
+   "id": "small-bourgeon",
+   "name": "The Small Bourgeon",
+   "safe_name": "An optional side area",
+   "first_act": "act1",
+   "order": 12,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "PowerPyx Act 1 collectibles guide",
+    "Push Square 100% collectibles guide (Act 1 optional)",
+    "Maxroll zone progression guide (free roam)"
+   ],
+   "notes": "Two act-tagged sources say Act 1.",
+   "collectibles_seen": {
+    "journals": 1,
+    "nevron_quests": 1
+   }
+  },
+  {
+   "id": "hidden-gestral-arena",
+   "name": "Hidden Gestral Arena",
+   "safe_name": "An optional battleground",
+   "first_act": "act1",
+   "order": 13,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Maxroll Hidden Gestral Arena guide",
+    "Maxroll zone progression guide",
+    "GameFAQs miscellaneous locations",
+    "game-checklists.com"
+   ],
+   "notes": "Act 1 per Maxroll (after reaching the village and meeting Esquie) and GameFAQs. Located near Yellow Harvest and the first Gestral Beach. game-checklists lists pictos, outfits and haircuts here without act tags. Game8 has no act information.",
+   "access": "After the village and Esquie"
+  },
+  {
+   "id": "red-woods",
+   "name": "The Red Woods",
+   "safe_name": "An optional forest",
+   "first_act": "act1",
+   "order": 14,
+   "kind": "optional",
+   "confidence": "two_or_more_sources",
+   "sources": [
+    "Maxroll zone progression guide",
+    "GameFAQs miscellaneous locations"
+   ],
+   "notes": "Act 1 per GameFAQs; Maxroll lists it after the village. West of The Small Bourgeon."
   }
+ ],
+ "unresolved": [
+  {
+   "name": "Later characters' gear",
+   "why": "Weapons and cosmetics for party members who join later would name them. Use generic wording ('a weapon for a later party member') until their join act is confirmed, and give such hints severity >= 1."
+  }
+ ],
+ "preliminary_counts": {
+  "note": "Counts below come from a summarizing fetch tool reading single pages. They are rough, partly truncated, and mix acts in places. They exist to size the work, not to define it.",
+  "pictos_by_area": {
+   "spring-meadows": 6,
+   "flying-waters": 5,
+   "ancient-sanctuary": 6,
+   "gestral-village": 2,
+   "esquies-nest": 2,
+   "stone-wave-cliffs": "9 to 11",
+   "yellow-harvest": 3,
+   "hidden-gestral-arena": 3,
+   "subtotal_named_areas": "about 36 to 38",
+   "not_yet_assigned": "24+ under 'The Continent'; some reward pictos come from Nevron quests"
+  },
+  "weapons_by_area": {
+   "opening city (starting weapons)": "5 to 6",
+   "spring-meadows": 2,
+   "flying-waters": 5,
+   "ancient-sanctuary": 2,
+   "gestral-village": 5,
+   "stone-wave-cliffs": 4,
+   "yellow-harvest": "2 (nearby)",
+   "subtotal": "about 25 to 26"
+  },
+  "outfits_by_area": {
+   "spring-meadows": 1,
+   "ancient-sanctuary": 1,
+   "gestral-village": 7,
+   "esquies-nest": 2,
+   "stone-wave-cliffs": 1,
+   "not_yet_assigned": "26 under 'Lumière (Prologue/Act I)' (includes defaults and edition extras) and 15+ under 'The Continent'"
+  },
+  "haircuts_by_area": {
+   "spring-meadows": 1,
+   "flying-waters": 1,
+   "ancient-sanctuary": 1,
+   "gestral-village": 1,
+   "esquies-nest": 2,
+   "stone-wave-cliffs": 1,
+   "yellow-harvest": 1,
+   "hidden-gestral-arena": 3,
+   "not_yet_assigned": "13 under 'Lumière (Prologue/Act I)' and about 40 under 'The Continent'"
+  },
+  "journals_act1_seen": 13,
+  "records_prologue_and_act1_seen": 7,
+  "nevron_quests_act1_seen": 4,
+  "lost_gestrals_act1_seen": 2,
+  "overall": "With merchants out of scope, the named-area items come to roughly 150 to 200 across all categories. That is the working target for the MVP until the extraction pass gives a real number."
+ },
+ "excluded_from_mvp": [
+  {
+   "name": "Everything sold by merchants (Lumière shops and open-world merchants)",
+   "act": "n/a",
+   "why": "Owner decision 2026-09-20: guides do not record merchant stock by act, so shop items are out of the MVP and the app says so. Revisit with Act 2. Affects roughly 26 outfits and 13 haircuts listed under 'Lumière (Prologue/Act I)', 15+ outfits, 40+ haircuts and 24+ pictos listed under 'The Continent' (counts from game-checklists.com, unverified)."
+  },
+  {
+   "name": "Stone Wave Cliffs Cave",
+   "act": "act2",
+   "why": "Push Square: Act 2 optional; Maxroll: after Stone Wave Cliffs. game-checklists pictos listed there are out of scope."
+  },
+  {
+   "name": "Boat Graveyard, White Tree",
+   "act": "act2",
+   "why": "Push Square: Act 2 optional."
+  },
+  {
+   "name": "Blades' Graveyard",
+   "act": "act2 or act3",
+   "why": "Push Square says Act 2, Steam guide says Act 3. Either way after the MVP."
+  },
+  {
+   "name": "Flying Casino",
+   "act": "act3",
+   "why": "Push Square: Act 3 optional."
+  },
+  {
+   "name": "Other Gestral Beaches",
+   "act": "act2 or act3",
+   "why": "Steam guide: three in Act 2, one in Act 3."
+  }
+ ]
 }
