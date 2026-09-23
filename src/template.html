@@ -78,6 +78,8 @@ ul.items{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .sev.s2{background:var(--s2bg);color:var(--s2)}.sev.s3{background:var(--s3bg);color:var(--s3)}
 .tier-text{margin:0;font-size:15px}
 .btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:6px 12px;font-size:14px;font-weight:600;justify-self:start}
+.linkbtn{border:0;background:none;color:var(--accent);font-size:13px;text-decoration:underline;padding:2px 4px}
+.chev{display:inline-block;width:1em;color:var(--muted)}
 .btn.ghost{background:none;color:var(--accent)}
 .btn.danger{border-color:var(--s3);background:var(--s3bg);color:var(--s3)}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
@@ -96,7 +98,7 @@ a.btn{text-decoration:none;display:inline-block}
     <h1 class="brand">Expedition Radar</h1>
     <span class="game">Clair Obscur: Expedition 33</span>
   </header>
-  <p class="notice">Early version: Prologue and Act 1 only. Act 2 and Act 3 are coming. Hints are drafts compiled from public guides; each item shows how far it can be trusted. Impact scores and spoiler labels are still being checked, so use the report link if something looks wrong.</p>
+  <p class="notice">Early version: Prologue and Act 1 only. Act 2 and Act 3 are coming, and items sold by merchants are not included yet. Hints are drafts compiled from public guides; each item shows how far it can be trusted. Impact scores and spoiler labels are still being checked, so use the report link if something looks wrong.</p>
 
   <section class="panel" aria-label="Your setup">
     <div>
@@ -156,7 +158,7 @@ let S = Object.assign({}, defaults);
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign({}, defaults, JSON.parse(raw)); } catch (e) {}
 if (!(S.ms >= 0 && S.ms < PLAY)) S.ms = 0;
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
-const ui = {q:"", open:new Set(), showLater:false, showPassed:false, confirm:null};
+const ui = {q:"", open:new Set(), fold:new Set(), showLater:false, showPassed:false, confirm:null};
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const idx = m => M.indexOf(m);
@@ -201,8 +203,11 @@ function tierBlock(it, n){
   const capped = n === 3 && it.tier3_cap;
   const needsConfirm = eff > S.tol || capped;
   let body;
+  const folded = ui.fold.has(it.id+":"+n);
+  let foldBtn = "";
   if (revealed >= n) {
-    body = '<p class="tier-text">'+esc(t.text)+'</p>';
+    foldBtn = '<button type="button" class="linkbtn" data-a="fold" data-id="'+it.id+'" data-n="'+n+'" aria-expanded="'+(!folded)+'">'+(folded?"Show":"Hide")+'</button>';
+    body = folded ? '' : '<p class="tier-text">'+esc(t.text)+'</p>';
   } else if (revealed < n - 1) {
     body = '<p class="note">Open hint '+(n-1)+' first.</p>';
   } else {
@@ -216,7 +221,7 @@ function tierBlock(it, n){
     if (eff > S.tol) body += '<p class="note">Above your spoiler tolerance ('+esc(TOL[S.tol][1])+'). This will be a '+SEV[eff].toLowerCase()+' for where you are now.</p>';
     body += '<button type="button" class="'+cls+'" data-a="reveal" data-id="'+it.id+'" data-n="'+n+'">'+label+'</button>';
   }
-  return '<div class="tier"><div class="tier-head"><span class="tier-name">'+n+'. '+TIER[n-1]+'</span><span class="sev s'+eff+'" title="Spoiler severity at '+MN[S.ms]+'">'+SEV[eff]+'</span></div>'+body+'</div>';
+  return '<div class="tier"><div class="tier-head"><span class="tier-name">'+n+'. '+TIER[n-1]+'</span><span class="sev s'+eff+'" title="Spoiler severity at '+MN[S.ms]+'">'+SEV[eff]+'</span>'+foldBtn+'</div>'+body+'</div>';
 }
 
 function rowHtml(it, st){
@@ -239,10 +244,10 @@ function rowHtml(it, st){
     if ((S.rev[it.id]||0) > 0) detail += '<button type="button" class="btn ghost" data-a="hide" data-id="'+it.id+'">Hide hints again</button>';
     detail += '<p class="src">Window: '+esc(windowText(it))+(it.window.pnr && it.window.pnr!=="unclear" ? " · point of no return: "+esc(it.window.pnr) : "")+'</p>';
     if (it.conflict) detail += '<p class="note"><strong>Sources disagree.</strong> '+esc(it.conflict)+'</p>';
-    detail += '<p class="src">Sources: '+it.sources.map(s=>esc(s.name)).join(", ")+(it.sources.length===1?" (single source)":"")+' · trust: '+(it.conflict?"sources disagree":it.status==="source_verified"?"sources agree":"unverified")+'</p><p class="src"><a href="'+esc(reportUrl(it))+'" target="_blank" rel="noopener">Report a problem with this item</a></p></div>';
+    detail += '<p class="src">Sources: '+it.sources.map(s=>esc(s.name)).join(", ")+(it.sources.length===1?" (single source)":"")+' · trust: '+(it.conflict?"sources disagree":it.status==="source_verified"?"sources agree":"unverified")+'</p><p class="src"><a href="'+esc(reportUrl(it))+'" target="_blank" rel="noopener">Report a problem with this item</a></p><button type="button" class="btn ghost" data-a="toggle" data-id="'+it.id+'">Close</button></div>';
   }
   return '<li class="row'+(done?" done":"")+'"><div class="row-head"><input type="checkbox" id="chk-'+it.id+'" data-a="check" data-id="'+it.id+'" aria-label="Mark done: '+esc(it.title_safe)+'"'+(done?" checked":"")+'>'+
-    '<button type="button" class="main" data-a="toggle" data-id="'+it.id+'" aria-expanded="'+open+'"><span class="title">'+esc(it.title_safe)+'</span><span class="meta">'+chips.join("")+'</span></button></div>'+detail+'</li>';
+    '<button type="button" class="main" data-a="toggle" data-id="'+it.id+'" aria-expanded="'+open+'"><span class="title"><span class="chev" aria-hidden="true">'+(open?"▾":"▸")+'</span> '+esc(it.title_safe)+'</span><span class="meta">'+chips.join("")+'</span></button></div>'+detail+'</li>';
 }
 
 function render(){
@@ -286,6 +291,7 @@ document.addEventListener("click", e => {
   else if (a === "lens") S.lens = el.dataset.v;
   else if (a === "tol") S.tol = +el.dataset.v;
   else if (a === "toggle") { ui.open.has(id) ? ui.open.delete(id) : ui.open.add(id); }
+  else if (a === "fold") { const k = id+":"+el.dataset.n; ui.fold.has(k) ? ui.fold.delete(k) : ui.fold.add(k); }
   else if (a === "later") ui.showLater = !ui.showLater;
   else if (a === "passed") ui.showPassed = !ui.showPassed;
   else if (a === "hide") { S.rev[id] = 0; }
@@ -313,7 +319,7 @@ document.addEventListener("input", e => {
   ui.q = e.target.value; const pos = e.target.selectionStart; render();
   const q = $("q"); q.value = ui.q; q.focus(); try { q.setSelectionRange(pos,pos); } catch (err) {}
 });
-$("reset").addEventListener("click", () => { S = Object.assign({}, defaults, {checked:{}, rev:{}}); ui.open.clear(); ui.confirm = null; save(); render(); });
+$("reset").addEventListener("click", () => { S = Object.assign({}, defaults, {checked:{}, rev:{}}); ui.open.clear(); ui.fold.clear(); ui.confirm = null; save(); render(); });
 $("ver").textContent = VERSION;
 $("repolink").href = REPO + "/issues/new?template=report-problem.yml";
 render();
